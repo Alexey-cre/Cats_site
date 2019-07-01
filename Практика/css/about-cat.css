@@ -1,0 +1,178 @@
+html{
+  background-color:white;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+      
+.site-header-main{
+	position: relative;
+	height: 400px;
+}
+
+.menu_items{
+  position: fixed; 
+  background:#666;
+  z-index: 100;
+  height: 65px; 
+  width: 97.4%; 
+  padding-right: 40px;
+}
+
+.logotip{
+  list-style: none;
+  display: block;  
+}
+
+.icon-logotip{
+  padding-right: 20px;
+  vertical-align: middle;
+}
+
+.site-header-main ul{
+  list-style: none; 
+  float: right;
+  margin-top:0px;
+}
+
+.site-header-main a{
+  text-decoration: none;
+  display: block;
+  background:#666;
+  color:white; 
+  font-family: arial; 
+  font-size: 20px;
+  text-align: center; 
+  margin: 5px;
+  margin-top:7px;
+  width: 100px;
+  padding:0px 15px; 
+  line-height:50px;   
+}
+
+.site-header-main a.item2{
+	width: 72px;
+}
+
+.site-header-main a.item3{
+	width: 55px;
+}
+
+.site-header-main a:hover{
+  box-shadow: inset 0 0 12px white;
+  background: #f90;
+}
+
+.site-header-main .logotip a{
+	width: 230px;
+	margin-top:3px;
+  padding:0px 0px;
+}
+
+.site-header-main li{
+  float:left; 
+}
+
+.header_icon{
+  position: absolute;
+  left: -10px;
+  width: 100.7%;
+  height: 100%;
+}
+
+.wrapper{
+  display: flex;
+	flex-direction: column;
+  background:rgb(245, 247, 250);
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.precondition{
+  text-decoration: none;
+  font-family: arial; 
+  color:#553333;
+  font-size: 18px;
+  margin: 20px 10px 0px 10px;
+}
+
+p{
+  text-indent: 40px;
+}
+
+.element{
+	color: #553333;
+	display: grid ;
+	grid-template-columns: 48% 52%;
+	grid-column-gap: 10px;
+	grid-row-gap: 30px;
+	margin: 50px 20px 30px 10px;
+}
+
+.block-text{
+	text-align: right;
+	font-family: arial; 
+	color:#553333;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.block-text:nth-child(even){
+	text-align: left;
+}
+
+.paragraph a{
+	font-family: arial; 
+	color:#553333;
+	text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.button a{
+	text-decoration: none;
+	padding: 10px;
+  margin: 5px;
+  background:#666; 
+  color:white; 
+  margin-top:7px;
+  width: 140px;
+  font-family: arial; 
+  font-size: 20px;
+  text-align: center;
+  line-height:100px; 
+}
+
+.button a:hover{
+  background: #f90;
+}
+
+.icon_element:hover{
+	transform: scale(1.03);
+  transition: all .5s;
+}
+
+#footer{
+	background: #666;
+	padding: 20px 20px;
+}
+
+#footer p{
+	text-align:center;
+	color: white;
+	font-size:15px;
+}
+
+#footer a{
+	text-decoration: none;
+	color: white;
+	font-size:15px;
+}
+
+#footer a:hover{
+	color: #f90;
+}

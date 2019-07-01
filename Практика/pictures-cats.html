@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/pictures-cats.css">
+    	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <title>All about cats</title>
+    </head>
+    <body background = "icon/wallpaper1.jpg" style="background-repeat: repeat; ">
+    	<header class="site-header-main">
+        	<div class="menu_icon">
+				<img class="header_icon" src=" icon/menu_icon1.jpg">
+			</div>
+			<div class="menu_items">
+        		<li class="icon-logotip"><a href="about-cat.html"><img class="cat" src=" icon/cat.png" height = "55">About cats</a></li>
+        	 	<ul>
+					<li><a class="item1" href="cat-breeds.html">Cat breeds</a></li>
+					<li><a class="item2" href="pictures-cats.html">Pictures</a></li>
+					<li><a class="item3" href="vote-page.html">Voting</a></li>
+				</ul>
+			</div>
+		</header>
+		<div class="breadcrumbs">
+			<a href="about-cat.html" title="Home"><img class="path" src="icon/home.png" width = "20" height = "20"></a>
+			<img class="arrow" src="icon/arrow.jpg" width = "15" height = "15">
+			<span class="article">Pictures</span>
+		</div>
+        <div class="wrapper">
+            <div id="app">
+                <v-app>
+                    <v-content>
+                        <v-card>
+                            <v-container grid-list-sm fluid>
+                                <v-layout  wrap align-center>
+                                    <v-flex xs6>
+                                        <v-select :items="categories"
+                                            item-text="name"
+                                            v-model="selected_category"
+                                            label="Categories"
+                                            return-object
+                                            attach></v-select>
+                                        </v-select>
+                                    </v-flex>
+                                </v-layout>
+                                <v-layout  wrap>
+                                    <v-flex v-for="n in images"
+                                        :§="n.id"
+                                        xs4
+                                        d-flex>
+                                        <v-card color="grey lighten-4"
+                                            flat  class="d-flex">
+                                            <v-img
+                                                :src="n.url"
+                                                lazy-src="https://picsum.photos/10/6"
+                                                class="grey lighten-2"
+                                                aspect-ratio="1">
+                                            </v-img>
+                                        </v-card>
+                                    </v-flex>
+                                </v-layout>
+                                <br>
+                                <v-layout  wrap align-center>
+                                    <v-flex xs11>
+                                        <v-card-title primary-title>
+                                        </v-card-title>
+                                        <v-pagination xs9
+                                            v-show="order!='Rand'" 
+                                            v-model="page"
+                                            :length="getNumPages"> 
+                                        </v-pagination>
+                                    </v-flex>
+                                </v-layout>
+                            </v-container>
+                        </v-card>
+                    </v-content>
+                </v-app>
+            </div>
+            <script src="js/pictures-cats.js"></script>
+        </div>
+	    <div id="footer">
+            <p>Tishalovich Alexey &copy; 2019 AboutCats.ru</p>
+ 	    </div>
+    </body>
+</html>
